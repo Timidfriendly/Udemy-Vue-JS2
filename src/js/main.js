@@ -1,14 +1,15 @@
 new Vue({
     el: '#app',
     data: {
-        title: 'My Vue title'
+        title: 'My Vue title',
+        subtitle: 'Proxied subtile saying Yo!'
     },
     methods: {
         changeTitle: function(event) {
             this.title = event.target.value;
         },
         sayHello: function () {
-            return "Subtile saying Hello!";
+            return this.subtitle;
         }
     }
 });
