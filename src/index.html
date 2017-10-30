@@ -17,7 +17,8 @@
                 <div class="row">
                     <div class="col">
                         <h1>{{ title }}</h1>
-                        <h2>{{ sayHello() }}</h2>
+                        <h2 v-once>{{ subtitle }} &</h2>
+                        <h2>{{ sayHelloSubtitle() }}  </h2>
 
                         <form>
                             <div class="form-group">
@@ -25,6 +26,7 @@
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" v-on:input="changeTitle">
 
                             </div>
+                            <a v-bind:href="link">Link to davidknowles.info</a>
                         </form>
                     </div>
                 </div>
