@@ -3,7 +3,8 @@ new Vue({
     data: {
         title: 'My Vue title',
         subtitle: 'Proxied subtile saying Yo!',
-        link: 'https://davidknowles.info'
+        link: 'https://davidknowles.info',
+        finishedLink: '<a href="https://davidknowles.info">Link to davidknowles.info</a>'
     },
     methods: {
         changeTitle: function(event) {

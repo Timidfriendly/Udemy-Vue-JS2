@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col">
                         <h1>{{ title }}</h1>
-                        <h2 v-once>{{ subtitle }} &</h2>
+                        <h2 v-once="">{{ subtitle }} &</h2>
                         <h2>{{ sayHelloSubtitle() }}  </h2>
 
                         <form>
@@ -26,7 +26,14 @@
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" v-on:input="changeTitle">
 
                             </div>
-                            <a v-bind:href="link">Link to davidknowles.info</a>
+                            <br>
+                            <h6>Rendering html</h6>
+                            <ul>
+                                <li><a v-bind:href="link">Link to davidknowles.info with v-bind directive </a></li>
+                                <li>{{ finishedLink }}, escaped html</li>
+                                <li><span v-html="finishedLink"></span> inject html with v-html directive</li>
+
+                            </ul>
                         </form>
                     </div>
                 </div>
