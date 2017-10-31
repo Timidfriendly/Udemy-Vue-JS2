@@ -8,6 +8,14 @@ new Vue({
     computed: {                 // This analyses the method and caches if it finds a reference to a data property.
         output: function () {   // In this case a reference to counter.
             return this.counter > 5 ? '= Greater than 5' : '= Less than 5';
+        }                       // Computed is used synchronously (instantly), and is not dependant on other methods
+    },                          // Computed is better Than Watch in most cases because it is optimised
+    watch: {                    // Watch is only to be used instead of Computed if you need to wait asynchronously on another part of the app
+        counter: function () {  // The watcher watch the 'KEY counter with data object'
+            var vm = this;      // exposes this outside of closure. data.counter would be visible and rewriteable otherwise
+            setTimeout(function () {
+                vm.counter = 0;
+            }, 3000);
         }
     }
 });
