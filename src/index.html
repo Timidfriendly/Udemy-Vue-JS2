@@ -8,6 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="js/vendor/vue.min.js"></script>
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <style>
+            h6 {
+                background-color: beige;
+                padding: 50px;
+            }
+            .fixedwidth {
+                min-width: 222px;
+                display: inline-block;
+            }
+            .donnot-listen {
+                background-color: #fff;
+                padding:30px;
+            }
+        </style>
     </head>
     <body>
 
@@ -17,7 +31,10 @@
                 <span><strong>{{ counter }}</strong></span>
             </p>
             <br>
-            <h6 v-on:mousemove="updateCoordinates">Coorindates {{ x }} / {{ y }}</h6>
+            <h6 v-on:mousemove="updateCoordinates">
+                <span class="fixedwidth">Coorindates {{ x }} / {{ y }}</span>
+                <span class="donnot-listen" v-on:mousemove="donnotListen">DEAD SPOT, don't listen to me can cancel event</span>
+            </h6>
             <p>Note what is interesting is the scope of this event. It is only registered as long as the cursor remains with the de section that has been defined as app region i.e. the h6</p>
         </section>
 
