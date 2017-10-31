@@ -1,4 +1,16 @@
 new Vue({
+    el: '#Section2-Lecture16',
+    data: {
+        counter: 0
+    },
+    methods: {
+        addOne: function(event) {
+            this.counter = this.counter + 1;
+        }
+    }
+});
+
+new Vue({
     el: '#app',
     data: {
         title: 'My Vue title',
@@ -16,3 +28,4 @@ new Vue({
         }
     }
 });
+
