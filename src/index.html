@@ -49,6 +49,7 @@
             <h3>Different ways of implementing event</h3>
             <p>
                 <button v-on:click="addOne(2, $event)">Click me to add two to count</button>
+                <button @click="addOne(2, $event)">@click is shorthand version of v-on:click directive</button>
                 <button v-on:click="counter = counter - 1">Click me to subtract one from count</button>
                 <span><strong>{{ counter }}</strong></span> =
                 <span><strong>{{ counter > 20 ? 'Greater than 20' : 'Smaller than 20' }}</strong></span> <br>
@@ -107,6 +108,10 @@
                                 <li><a v-bind:href="link">Link to davidknowles.info with v-bind directive </a></li>
                                 <li>{{ finishedLink }}, escaped html</li>
                                 <li><span v-html="finishedLink"></span> inject html with v-html directive</li>
+                                <li><a :href="link">:href is shorthand version of v-bind directive </a></li>
+                                <li><a @click="link">@click is shorthand version of v-on:click directive </a></li>
+
+
 
                             </ul>
                         </form>
