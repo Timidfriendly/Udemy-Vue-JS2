@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>VueJS Exercise 1</title>
+    <title>VueJS Exercise 2</title>
     <meta name="description" content="">
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
 </head>
@@ -28,6 +28,12 @@
     <h6>Access the default JS Event object</h6>
     <div>
         <input type="text" v-on:keyup.enter="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
+
+    <h6>Use a custom store function</h6>
+    <div>
+        <input type="text" v-on:keyup.enter="store($event.target.value)">
         <p>{{ value }}</p>
     </div>
 </div>

@@ -9,6 +9,9 @@ new Vue({
             },
             listenAndStoreValue: function(event) {
                 this.value = event.target.value;
+            },
+            store: function (event) {
+                this.value = event
             }
         } 
     });
