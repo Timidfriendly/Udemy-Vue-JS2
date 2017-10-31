@@ -1,4 +1,20 @@
 new Vue({
+    el: '#Section2-Lecture23',
+    data: {
+        counter: 0,
+        counterTwo: 0           // 'computed' Methods that call this property will not be rerendered if the value of 'counter' changes
+                                // However if that is not the case for normal methods. if just value value changes all methods will cause dom update of views
+    },
+    computed: {                 // This analyses the method and caches if it finds a reference to a data property.
+        output: function () {   // In this case a reference to counter.
+            return this.counter > 5 ? '= Greater than 5' : '= Less than 5';
+        }
+    }
+});
+
+
+
+new Vue({
     el: '#Section2-Lecture16',
     data: {
         counter: 0,
