@@ -47,7 +47,8 @@
             <p>Note: what is interesting is the scope of this event. It is only registered as long as the cursor remains with the de section that has been defined as app region i.e. the h6</p>
 
             <br>
-            <input type="text" v-on:keyup="alertMe" />
+            <input type="text" v-on:keyup.enter.space.tab="alertMe" />
+            <p>Note: Example of chained modifiers. Now only fires when either, enter, space or tab are key up</p>
 
         </section>
 
