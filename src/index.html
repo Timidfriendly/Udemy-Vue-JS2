@@ -12,8 +12,13 @@
     <body>
 
         <section id="Section2-Lecture16">
-            <button v-on:click="addOne">Click me to add one to count</button>
-            <p>{{ counter }}</p>
+            <p>
+                <button v-on:click="addOne">Click me to add one to count</button>
+                <span><strong>{{ counter }}</strong></span>
+            </p>
+            <br>
+            <h6 v-on:mousemove="updateCoordinates">Coorindates {{ x }} / {{ y }}</h6>
+            <p>Note what is interesting is the scope of this event. It is only registered as long as the cursor remains with the de section that has been defined as app region i.e. the h6</p>
         </section>
 
         <hr>

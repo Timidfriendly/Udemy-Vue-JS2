@@ -1,11 +1,17 @@
 new Vue({
     el: '#Section2-Lecture16',
     data: {
-        counter: 0
+        counter: 0,
+        x: 0,
+        y: 0
     },
     methods: {
         addOne: function(event) {
             this.counter = this.counter + 1;
+        },
+        updateCoordinates: function(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
         }
     }
 });
