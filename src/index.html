@@ -32,7 +32,6 @@
     <body>
 
         <section id="Section2-Lecture16">
-            <h1>Section 2, Lecture 16-19</h1>
             <p>
                 <button v-on:click="addOne(2, $event)">Click me to add two to count</button>
                 <button v-on:click="counter = counter - 1">Click me to subtract one from count</button>
@@ -53,6 +52,13 @@
             <br>
             <input type="text" v-on:keyup.enter.space.tab="alertMe" />
             <p>Note: Example of chained modifiers. Now only fires when either, enter, space or tab are key up</p>
+
+            <br>
+            <h3>Using Two-Way-Binding</h3>
+            <div class="form-group">
+                <input type="text" class="form-control" id="twoWayDataBind" v-model="twoWay" placeholder="two way data bind">
+                <p>{{ twoWay }}</p>
+            </div>
 
         </section>
 
