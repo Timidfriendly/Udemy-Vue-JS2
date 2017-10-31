@@ -24,6 +24,12 @@
         <input type="text" v-on:keydown.enter="listenAndStoreValue">
         <p>{{ value }}</p>
     </div>
+
+    <h6>Access the default JS Event object</h6>
+    <div>
+        <input type="text" v-on:keyup.enter="value = $event.target.value">
+        <p>{{ value }}</p>
+    </div>
 </div>
 
 <script src="app.js"></script>
