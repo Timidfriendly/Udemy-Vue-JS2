@@ -9,7 +9,10 @@
         <script src="js/vendor/vue.min.js"></script>
         <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
         <style>
-            h6 {
+            section {
+                margin: 3rem;
+            }
+            .h6 {
                 background-color: beige;
                 padding: 50px;
             }
@@ -26,16 +29,19 @@
     <body>
 
         <section id="Section2-Lecture16">
+            <h1>Section 2, Lecture 16-19</h1>
             <p>
                 <button v-on:click="addOne(2, $event)">Click me to add one to count</button>
                 <span><strong>{{ counter }}</strong></span>
             </p>
             <br>
-            <h6 v-on:mousemove="updateCoordinates">
+            <h6 class="h6" v-on:mousemove="updateCoordinates">
                 <span class="fixedwidth">Coorindates {{ x }} / {{ y }}</span>
-                <span class="donnot-listen" v-on:mousemove="donnotListen">DEAD SPOT, don't listen to me can cancel event</span>
+                <span class="donnot-listen" v-on:mousemove.stop="">DEAD SPOT, don't listen to me can cancel event</span>
+
             </h6>
-            <p>Note what is interesting is the scope of this event. It is only registered as long as the cursor remains with the de section that has been defined as app region i.e. the h6</p>
+            <p>Note: There are also event modifiers thatt can be chained e.g. <code class="">.prevent</code></p>
+            <p>Note: what is interesting is the scope of this event. It is only registered as long as the cursor remains with the de section that has been defined as app region i.e. the h6</p>
         </section>
 
         <hr>
@@ -45,6 +51,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col">
+                        <h1>Section 1-2, Lecture 1-5</h1>
+
                         <h1>{{ title }}</h1>
                         <h2 v-once="">{{ subtitle }} &</h2>
                         <h2>{{ sayHelloSubtitle() }}  </h2>
