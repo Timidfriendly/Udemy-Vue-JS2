@@ -24,12 +24,38 @@
                 background-color: #fff;
                 padding:30px;
             }
+            .demo {
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+                display: inline-block;
+                margin: 10px;
+            }
+            .demo--red {
+                background-color: red;
+            }
+            .demo--green {
+                background-color: green;
+            }
+            .demo--blue {
+                background-color: blue;
+            }
         </style>
     </head>
 
 
 
     <body>
+
+        <section id="Section2-Lecture26">
+            <h2></h2>
+            <h3>Section 2:26. Dynamic Styling with CSS Classes - Basics</h3>
+            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--red': changeColor}"></div>
+            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--green': changeColor}"></div>
+            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--blue': changeColor}"></div>
+        </section>
+
+        <hr>
 
         <section id="Section2-Lecture23">
             <h3>Using computed to avoid recalculating everytime dom updates</h3>

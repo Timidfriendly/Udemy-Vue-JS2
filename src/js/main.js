@@ -1,4 +1,14 @@
 new Vue({
+    el: '#Section2-Lecture26',
+    data: {
+        changeColor: false
+    }
+
+
+});
+
+
+new Vue({
     el: '#Section2-Lecture23',
     data: {
         counter: 0,
