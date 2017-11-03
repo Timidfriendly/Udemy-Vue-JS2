@@ -24,12 +24,21 @@
                 background-color: #fff;
                 padding:30px;
             }
+
+            /* Section2-Lecture26 */
             .demo {
                 width: 100px;
                 height: 100px;
                 background-color: gray;
-                display: inline-block;
                 margin: 10px;
+                text-align: center;
+                display: inline-flex;
+                justify-content: center;
+                flex-direction: column;
+                vertical-align: top;
+            }
+            .demo--yellow {
+                background-color: yellow;
             }
             .demo--red {
                 background-color: red;
@@ -40,19 +49,25 @@
             .demo--blue {
                 background-color: blue;
             }
+
         </style>
     </head>
 
 
 
     <body>
-
         <section id="Section2-Lecture26">
             <h2></h2>
-            <h3>Section 2:26. Dynamic Styling with CSS Classes - Basics</h3>
+            <h3>Section 2:26-27. Dynamic Styling with CSS Classes - Basics</h3>
+            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--yellow': changeColor}"></div>
             <div class="demo" @click="changeColor = !changeColor" :class="{'demo--red': changeColor}"></div>
-            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--green': changeColor}"></div>
-            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--blue': changeColor}"></div>
+            <div class="demo" @click="changeColor = !changeColor" :class="{'demo--blue': changeColor, 'demo--yellow': !changeColor}"></div>
+            <div class="demo" @click="changeColor = !changeColor" :class="divClasses"></div>
+            <div class="demo" :class="'demo--' + color">5</div>
+
+            <p>-- -- -- -- </p>
+            <label for="define-color">Define color for block 5</label>
+            <p><input type="text" v-model="color" id="define-color"></p>
         </section>
 
         <hr>

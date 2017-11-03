@@ -1,8 +1,21 @@
 new Vue({
     el: '#Section2-Lecture26',
     data: {
-        changeColor: false
+        changeColor: false,
+        color: 'green'
+    },
+    computed: {
+        divClasses: function () {
+            return {
+                'demo--blue': this.changeColor,
+                'demo--yellow': !this.changeColor
+            }
+        }
     }
+
+    // computed: {
+    //     changeColor:
+    // }
 
 
 });
