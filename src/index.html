@@ -64,6 +64,8 @@
             <div class="demo" @click="changeColor = !changeColor" :class="{'demo--blue': changeColor, 'demo--yellow': !changeColor}"></div>
             <div class="demo" @click="changeColor = !changeColor" :class="divClasses"></div>
             <div class="demo" :class="'demo--' + color">5</div>
+            <div class="demo" @click="changeColor = !changeColor" :class="['demo--' + color, {'demo--blue': !changeColor}]"></div>
+
 
             <p>-- -- -- -- </p>
             <label for="define-color">Define color for block 5</label>
