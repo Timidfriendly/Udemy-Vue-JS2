@@ -66,10 +66,19 @@
             <div class="demo" :class="'demo--' + color">5</div>
             <div class="demo" @click="changeColor = !changeColor" :class="['demo--' + color, {'demo--blue': !changeColor}]"></div>
 
+            <div class="demo" :style="{backgroundColor: 'black'}"></div>
+            <div class="demo" :style="{'background-color':'black', 'color': '#fff'}">text</div>
+            <div class="demo" :style="{'background-color':'pink'}">pink</div>
+            <div class="demo" :style="myStyle">{{ text }}</div>
+
 
             <p>-- -- -- -- </p>
             <label for="define-color">Define color for block 5</label>
             <p><input type="text" v-model="color" id="define-color"></p>
+            <label for="define-width">Define width for block pink</label>
+            <p><input type="text" v-model="width" id="define-width"></p>
+            <label for="define-text">Define text for block</label>
+            <p><input type="text" v-model="text" id="define-text"></p>
         </section>
 
         <hr>

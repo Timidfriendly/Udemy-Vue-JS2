@@ -2,13 +2,22 @@ new Vue({
     el: '#Section2-Lecture26',
     data: {
         changeColor: false,
-        color: 'green'
+        color: 'green',
+        width: 100,
+        text: ''
     },
     computed: {
         divClasses: function () {
             return {
                 'demo--blue': this.changeColor,
                 'demo--yellow': !this.changeColor
+            }
+        },
+        myStyle: function () {
+            return {
+                'background-color': 'Chocolate',
+                // backgroundColor: 'Crimson',  // this works too
+                width: this.width + 'px'
             }
         }
     }
