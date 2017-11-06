@@ -70,6 +70,8 @@
             <div class="demo" :style="{'background-color':'black', 'color': '#fff'}">text</div>
             <div class="demo" :style="{'background-color':'pink'}">pink</div>
             <div class="demo" :style="myStyle">{{ text }}</div>
+            <div class="demo" :style="[myStyle, {'height': width + 'px'}]">{{ text }}</div>
+
 
 
             <p>-- -- -- -- </p>
