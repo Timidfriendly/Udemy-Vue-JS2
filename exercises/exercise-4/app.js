@@ -5,13 +5,17 @@ new Vue({
     },
     methods: {
         startEffect: function (event) {
-            this.myClass = 'shrink';
+            var highlight = true;
             var vm = this;
 
+            function toggleClass() {
+                vm.myClass = vm.highlight ? 'highlight' : 'shrink';
+                vm.highlight = !vm.highlight;
+            }
+
             setInterval(function() {
-                vm.myClass = 'highlight'
+                toggleClass();
             }, 1000);
-            return this.myClass
         }
     }
 });
