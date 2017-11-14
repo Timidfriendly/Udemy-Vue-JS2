@@ -19,7 +19,7 @@
 
     <div>
     <button @click.once="startClassSwitch">Start Effect</button>
-    <div id="effect2" :class="{ 'highlight': highlight2, 'shrink': !highlight2 }"></div>
+    <div id="effect2" :class="{ 'highlight': highlight2, 'shrink': !highlight2 && !'undefined'  }"></div>
 </div>
 
 

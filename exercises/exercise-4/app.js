@@ -3,7 +3,7 @@ new Vue({
     data: {
         myClass: '',
         highlight: true,
-        highlight2: ''
+        highlight2: undefined
     },
     methods: {
         startEffect: function (event) {
@@ -21,11 +21,9 @@ new Vue({
         },
 
         startClassSwitch: function (event) {
-            // var highlight2 = "false";
             var vm = this;
 
             function toggleClass() {
-                // highlight2 = true;
                 vm.highlight2 = !vm.highlight2;
             }
 
