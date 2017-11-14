@@ -1,9 +1,28 @@
 new Vue({
     el: '#exercise',
     data: {
+        1 : '',
         myClass: '',
         highlight: true,
-        highlight2: undefined
+        highlight2: undefined,
+        2 : '',
+        classPattern: 'stripped',
+        classColor1: 'red',
+        classColor2: 'green',
+        classColor3: 'yellow',
+        classBorderBase: 'border',
+        classBorder6: 'border-6',
+        classP20: 'p-20',
+        classP30: 'p-30',
+        3 : '',
+        myDynamicClass: '',
+        4 : '',
+        myDynamicClass2: '',
+        myDynamicClass3: '',
+        5 : '',
+        myStyle: 'padding: 40px, background-color: yellow'
+        // 6 : '',
+
     },
     methods: {
         startEffect: function (event) {

@@ -14,3 +14,46 @@
   background-color: gray;
   width: 50px !important;
 }
+
+.stripped {
+  padding: 10px;
+  background: repeating-linear-gradient(
+          45deg,
+          #606dbc,
+          #606dbc 10px,
+          #465298 10px,
+          #465298 20px
+  );
+}
+
+.red {
+  padding: 10px;
+  background-color: red;
+}
+
+.green {
+  padding: 10px;
+  background-color: green;
+}
+
+.yellow {
+  padding: 10px;
+  background-color: yellow;
+}
+
+.border {
+  border: 3px solid #000;
+}
+
+.border-6 {
+  border-width: 6px;
+}
+
+
+.p-20 {
+  padding: 20px;
+}
+
+.p-30 {
+  padding: 20px;
+}
