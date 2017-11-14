@@ -17,6 +17,11 @@
     <div id="effect" :class="myClass"></div>
   </div>
 
+    <div>
+    <button @click.once="startClassSwitch">Start Effect</button>
+    <div id="effect2" :class="{ 'highlight': highlight2, 'shrink': !highlight2 }"></div>
+</div>
+
 
   <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
   <div>I got no class :(</div>
