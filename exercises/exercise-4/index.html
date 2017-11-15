@@ -24,7 +24,7 @@
 
 
   <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
-  <div :class="[ classPattern, classBorderBase ]">I got no class :(</div>
+  <div :class="[ classColor1, classBorderBase ]">I got no class :(</div>
 
 
   <!-- 3) Let the user enter a class (create some example classes) and attach it -->
@@ -51,8 +51,11 @@
 
   <!-- 6) Create a simple progress bar with setInterval and style bindings. Start it by hitting the below button. -->
   <div>
-    <!--<button v-on:click="startProgress">Start Progress</button>-->
-    <div></div>
+    <button v-on:click.once="startProgress">Start Progress</button>
+    <div class="border" :style="{'background-color':'rgba(0,0,0,0.7)'}">
+        <!--<div class="stripped" :style="{'width': barWidth}"></div>-->
+        <div class="stripped" :style="{'width': barWidth + '%'}"></div>
+    </div>
   </div>
 </div>
 

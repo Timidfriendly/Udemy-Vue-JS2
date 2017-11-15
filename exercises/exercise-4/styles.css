@@ -16,7 +16,7 @@
 }
 
 .stripped {
-  padding: 10px;
+  padding: 20px 0;
   background: repeating-linear-gradient(
           45deg,
           #606dbc,
@@ -24,7 +24,42 @@
           #465298 10px,
           #465298 20px
   );
+
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 2s linear 2;
+  -moz-animation: Gradient 2s linear 2;
+  animation: Gradient 2s linear 2;
+
+
 }
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  100% {
+    background-position: 100% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  100% {
+    background-position: 100% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  100% {
+    background-position: 100% 50%
+  }
+}
+
 
 .red {
   padding: 10px;

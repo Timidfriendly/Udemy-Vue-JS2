@@ -20,8 +20,13 @@ new Vue({
         myDynamicClass2: '',
         myDynamicClass3: '',
         5 : '',
-        myStyle: 'padding: 40px, background-color: yellow'
-        // 6 : '',
+        myStyle: {
+            'padding': '40px',
+            'background-color':'pink'
+        },
+        6 : '',
+        barWidth: '0'
+
 
     },
     methods: {
@@ -49,6 +54,22 @@ new Vue({
             setInterval(function() {
                 toggleClass();
             }, 1000);
+        },
+
+        startProgress: function () {
+            var vm = this;
+
+            function animateWidth() {
+                if (vm.barWidth < 100) {
+                    vm.barWidth++;
+                } else {
+                    clearInterval(myAnimation);
+                }
+            }
+
+            var myAnimation = setInterval(function () {
+                animateWidth();
+            }, 20);
         }
     }
 });
