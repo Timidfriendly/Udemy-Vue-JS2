@@ -1,0 +1,98 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>VueJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="js/vendor/vue.min.js"></script>
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <style>
+
+
+        </style>
+    </head>
+
+
+
+
+
+    <body>
+        <hr>
+
+        <section id="Section3_Lecture-33-45">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+
+
+                        <h1>Section 3: Lecture 33-45</h1>
+                        <div class="card my-5">
+                            <div class="card-block p-5">
+                                <h4 class="card-title">Lecture 33—37</h4>
+                                <div id="app">
+                                    <p v-if="!show">You can see me! - adding and removing from the dom</p>
+                                    <p v-else="show">Do you also see me?</p>
+                                    <p v-show="show">This is hidden through v-show</p>
+                                </div>
+                                <a href="#" @click="show = !show" class="btn btn-primary">Show Hide</a>
+                            </div>
+                        </div>
+
+
+                        <div class="card my-5">
+                            <div class="card-block p-5">
+                                <h4 class="card-title">Lecture 38-39</h4>
+
+                                <div class="my-5">
+                                    <ul class="list-group my-1">
+                                        <li class="list-group-item" v-for="ingredient in ingredients" v-key="ingredient">{{ ingredient }}</li>
+                                                                </ul>
+                                                                <input type="text" class="form-control" v-model="newIngredient" placeholder="Enter ingredient to add">
+                                                                <button type="button" class="btn btn-secondary" @click="ingredients.push('some string')">Add by pushing</button> {{ newIngredient }}
+                                </div>
+
+
+                                <div class="my-5">
+                                    <ul class="list-group my-1">
+                                        <li class="list-group-item" v-for="(ingredient, index) in ingredients">{{ index }}: {{ ingredient }}</li>
+                                    </ul>
+
+                                    <dl class="list-group-item my-1" v-for="person in persons">
+                                        <dt>{{ person.name }}</dt>
+                                        <dd>{{ person.age }}</dd>
+                                        <dd>{{ person.color }}</dd>
+                                    </dl>
+
+                                    <ul class="list-group my-1">
+                                        <li class="list-group-item" v-for="person in persons">
+                                            <div v-for="(value, key, index) in person">
+                                                <strong>{{ index}}: {{ key }}</strong>
+                                                :
+                                                {{ value }}
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="btn-group my-3" role="group" aria-label="First group">
+                                    <button type="button" class="btn btn-outline-secondary" v-for="n in 10">{{ n }}</button>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/section-3.js"></script>
+
+    </body>
+</html>
